@@ -63,6 +63,26 @@
       "avgSalary": 40000,
       "expectationsGap": "+25%",
       "skills": ["1C", "МСФО", "Налоговый кодекс КР", "Excel Expert"]
+    },
+    {
+      "id": "teacher",
+      "label": "Педагог / Преподаватель",
+      "baseSuccessProbability": 85,
+      "graduates": 400,
+      "vacancies": 950,
+      "avgSalary": 32000,
+      "expectationsGap": "-10%",
+      "skills": ["Методика обучения", "Критическое мышление", "Digital Skills", "Психология"]
+    },
+    {
+      "id": "lawyer_marketer",
+      "label": "Юрист / Маркетолог",
+      "baseSuccessProbability": 30,
+      "graduates": 1200,
+      "vacancies": 180,
+      "avgSalary": 45000,
+      "expectationsGap": "+35%",
+      "skills": ["Аналитика", "Soft Skills", "English B2", "Digital Branding"]
     }
   ],
   "vacancies": [

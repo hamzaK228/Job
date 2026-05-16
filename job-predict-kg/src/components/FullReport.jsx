@@ -255,6 +255,81 @@ export function FullReport({ onBack }) {
           </aside>
         </section>
 
+        {/* Specialized Guides Section */}
+        <section className="mt-32">
+          <div className="mb-12">
+            <h2 className="text-4xl font-black text-white tracking-tighter uppercase">Доступные Гайды по Специальностям</h2>
+            <p className="mt-4 text-slate-500 font-medium italic">Эксклюзивно для 2025 года. Нажмите для ознакомления.</p>
+          </div>
+          
+          <div className="grid gap-6 sm:grid-cols-2">
+            {[
+              { 
+                title: 'Айти (Software Engineering)', 
+                salary: '80,000 - 150,000 сом', 
+                demand: 'Критически Высокий',
+                skills: 'Fullstack, AI Integration, Cloud Systems',
+                color: 'border-cyan-500/20 bg-cyan-500/5'
+              },
+              { 
+                title: 'Педагог (Education)', 
+                salary: '35,000 - 55,000 сом', 
+                demand: 'Высокий (Дефицит)',
+                skills: 'Digital Literacy, Adaptive Learning, Psychology',
+                color: 'border-indigo-500/20 bg-indigo-500/5'
+              },
+              { 
+                title: 'Доктор (Medical Specialist)', 
+                salary: '40,000 - 70,000 сом', 
+                demand: 'Стабильно Высокий',
+                skills: 'E-health Systems, Diagnostics, Surgical Skills',
+                color: 'border-emerald-500/20 bg-emerald-500/5'
+              },
+              { 
+                title: 'Юрист / Маркетолог', 
+                salary: '50,000 - 90,000 сом', 
+                demand: 'Умеренный / Растущий',
+                skills: 'Digital Law, Growth Hacking, Analytics',
+                color: 'border-fuchsia-500/20 bg-fuchsia-500/5'
+              }
+            ].map((guide, i) => (
+              <motion.div
+                key={guide.title}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                whileHover={{ y: -5 }}
+                className={`relative rounded-[32px] border ${guide.color} p-8 overflow-hidden group`}
+              >
+                <div className="relative z-10">
+                  <h4 className="text-2xl font-black text-white uppercase mb-6 tracking-tight">{guide.title}</h4>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center text-sm border-b border-white/5 pb-2">
+                      <span className="text-slate-500 font-bold uppercase tracking-widest text-[10px]">Прогноз зарплаты</span>
+                      <span className="text-white font-black">{guide.salary}</span>
+                    </div>
+                    <div className="flex justify-between items-center text-sm border-b border-white/5 pb-2">
+                      <span className="text-slate-500 font-bold uppercase tracking-widest text-[10px]">Спрос</span>
+                      <span className="text-white font-black">{guide.demand}</span>
+                    </div>
+                    <div className="pt-2">
+                      <span className="text-slate-500 font-bold uppercase tracking-widest text-[10px] block mb-2">Ключевые навыки 2025</span>
+                      <p className="text-xs text-slate-300 font-medium leading-relaxed">{guide.skills}</p>
+                    </div>
+                  </div>
+                  <button className="mt-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-white/50 hover:text-white transition-colors">
+                    <FileDown className="size-4" />
+                    Download PDF Guide
+                  </button>
+                </div>
+                {/* Decorative background element */}
+                <div className="absolute -right-8 -bottom-8 size-32 rounded-full bg-white/5 blur-3xl group-hover:scale-150 transition-transform" />
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
         <footer className="mt-32 pt-12 border-t border-white/5 text-center">
           <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600">
             © 2025 JOB PREDICT KG — NATIONAL STATISTICAL DATA INTEGRATION
