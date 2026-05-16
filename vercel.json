@@ -17,6 +17,18 @@
       "destination": "server/index.js"
     },
     {
+      "source": "/assets/(.*)",
+      "destination": "/job-predict-kg/assets/$1"
+    },
+    {
+      "source": "/favicon.svg",
+      "destination": "/job-predict-kg/favicon.svg"
+    },
+    {
+      "source": "/icons.svg",
+      "destination": "/job-predict-kg/icons.svg"
+    },
+    {
       "source": "/(.*)",
       "destination": "/job-predict-kg/index.html"
     }
