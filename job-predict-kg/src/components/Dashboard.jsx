@@ -270,7 +270,7 @@ function SeekerDashboard({ user }) {
   )
 }
 
-export default function Dashboard({ user, onLogout }) {
+export function Dashboard({ user, onLogout }) {
   return (
     <div className="min-h-screen bg-slate-950 pb-20">
       <header className="border-b border-white/5 bg-slate-950/50 backdrop-blur-md sticky top-0 z-40">
