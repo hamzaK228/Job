@@ -52,6 +52,10 @@ export default function App() {
   const [user, setUser] = useState(null)
   const [view, setView] = useState('home') // 'home' or 'report'
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [view])
+
   const { acceptanceRate, recommendedVacancies } = useAcceptanceRate({
     age: Number(age) || 0,
     experience,
