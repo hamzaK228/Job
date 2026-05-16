@@ -32,11 +32,7 @@ export function ReportSection({ onOpenReport }) {
             </div>
           </div>
           
-          <motion.div 
-            whileHover={{ scale: 1.05, rotateZ: 1 }}
-            whileTap={{ scale: 0.95 }}
-            className="shrink-0"
-          >
+          <div className="flex flex-col sm:flex-row gap-4 shrink-0">
             <button
               onClick={onOpenReport}
               className="relative inline-flex items-center justify-center gap-3 rounded-2xl bg-white px-10 py-5 text-sm font-black text-slate-950 shadow-[0_0_40px_rgba(255,255,255,0.2)] transition-all hover:shadow-[0_0_60px_rgba(255,255,255,0.3)] uppercase tracking-widest"
@@ -44,7 +40,14 @@ export function ReportSection({ onOpenReport }) {
               <FileDown className="size-5" />
               Open Digital Report
             </button>
-          </motion.div>
+            <a
+              href="/oficialnyj-otchet-proekta.pdf"
+              download
+              className="relative inline-flex items-center justify-center gap-3 rounded-2xl bg-white/5 border border-white/10 px-8 py-5 text-sm font-bold text-white transition-all hover:bg-white/10 uppercase tracking-widest"
+            >
+              Download PDF
+            </a>
+          </div>
         </div>
       </div>
     </motion.section>

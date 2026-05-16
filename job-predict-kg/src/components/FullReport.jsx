@@ -319,10 +319,14 @@ export function FullReport({ onBack }) {
                       <p className="text-xs text-slate-300 font-medium leading-relaxed">{guide.skills}</p>
                     </div>
                   </div>
-                  <button className="mt-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-white/50 hover:text-white transition-colors">
+                  <a 
+                    href="/oficialnyj-otchet-proekta.pdf"
+                    download
+                    className="mt-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-white/50 hover:text-white transition-colors"
+                  >
                     <FileDown className="size-4" />
                     Download PDF Guide
-                  </button>
+                  </a>
                 </div>
                 {/* Decorative background element */}
                 <div className="absolute -right-8 -bottom-8 size-32 rounded-full bg-white/5 blur-3xl group-hover:scale-150 transition-transform" />
