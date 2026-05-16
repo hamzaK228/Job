@@ -320,12 +320,13 @@ export function FullReport({ onBack }) {
                     </div>
                   </div>
                   <a 
-                    href="/oficialnyj-otchet-proekta.pdf"
-                    download
+                    href="https://documents1.worldbank.org/curated/en/788011504107129188/pdf/119159-WP-v1-P157404-PUBLIC-Kyrgyz-Republic-Jobs-Diagnostic.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="mt-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-white/50 hover:text-white transition-colors"
                   >
                     <FileDown className="size-4" />
-                    Download PDF Guide
+                    Download Real Guide
                   </a>
                 </div>
                 {/* Decorative background element */}

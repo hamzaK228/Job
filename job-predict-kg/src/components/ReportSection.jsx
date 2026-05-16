@@ -41,11 +41,12 @@ export function ReportSection({ onOpenReport }) {
               Open Digital Report
             </button>
             <a
-              href="/oficialnyj-otchet-proekta.pdf"
-              download
+              href="https://documents1.worldbank.org/curated/en/788011504107129188/pdf/119159-WP-v1-P157404-PUBLIC-Kyrgyz-Republic-Jobs-Diagnostic.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative inline-flex items-center justify-center gap-3 rounded-2xl bg-white/5 border border-white/10 px-8 py-5 text-sm font-bold text-white transition-all hover:bg-white/10 uppercase tracking-widest"
             >
-              Download PDF
+              Download Real PDF
             </a>
           </div>
         </div>
