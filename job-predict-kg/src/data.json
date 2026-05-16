@@ -25,26 +25,6 @@
       "skills": ["React/Vue", "Node.js", "English B2", "Git", "Docker"]
     },
     {
-      "id": "seamstress",
-      "label": "Швея / Технолог",
-      "baseSuccessProbability": 95,
-      "graduates": 150,
-      "vacancies": 1200,
-      "avgSalary": 45000,
-      "expectationsGap": "-5%",
-      "skills": ["Раскрой", "Работа с оборудованием", "Скорость", "Знание тканей"]
-    },
-    {
-      "id": "construction",
-      "label": "Строитель / Инженер",
-      "baseSuccessProbability": 88,
-      "graduates": 200,
-      "vacancies": 850,
-      "avgSalary": 55000,
-      "expectationsGap": "0%",
-      "skills": ["Чертежи", "ГОСТ", "Сметы", "Техника безопасности"]
-    },
-    {
       "id": "doctor",
       "label": "Врач / Медицина",
       "baseSuccessProbability": 92,
@@ -53,16 +33,6 @@
       "avgSalary": 35000,
       "expectationsGap": "-20%",
       "skills": ["Диагностика", "Латынь", "Стрессоустойчивость", "Фармакология"]
-    },
-    {
-      "id": "accountant",
-      "label": "Бухгалтер / Экономист",
-      "baseSuccessProbability": 35,
-      "graduates": 800,
-      "vacancies": 120,
-      "avgSalary": 40000,
-      "expectationsGap": "+25%",
-      "skills": ["1C", "МСФО", "Налоговый кодекс КР", "Excel Expert"]
     },
     {
       "id": "teacher",
@@ -96,31 +66,13 @@
       "difficultyPenalty": 6
     },
     {
-      "id": "seam-1",
-      "professionId": "seamstress",
-      "title": "Швея-мотористка (трикотаж)",
-      "company": "Dordoi Fashion",
+      "id": "doc-1",
+      "professionId": "doctor",
+      "title": "Врач-терапевт",
+      "company": "Bishkek Medical Center",
       "format": "Офис",
-      "salaryRange": "40 000 – 80 000 сом",
-      "difficultyPenalty": 1
-    },
-    {
-      "id": "const-1",
-      "professionId": "construction",
-      "title": "Инженер ПТО",
-      "company": "Elite House",
-      "format": "Объект",
-      "salaryRange": "60 000 – 90 000 сом",
-      "difficultyPenalty": 5
-    },
-    {
-      "id": "acc-1",
-      "professionId": "accountant",
-      "title": "Главный бухгалтер",
-      "company": "Golden Bridge",
-      "format": "Офис",
-      "salaryRange": "70 000 – 100 000 сом",
-      "difficultyPenalty": 8
+      "salaryRange": "35 000 – 50 000 сом",
+      "difficultyPenalty": 4
     }
   ],
   "regionalDistribution": [
