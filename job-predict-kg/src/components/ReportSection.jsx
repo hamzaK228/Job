@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Landmark, GraduationCap, FileDown } from 'lucide-react'
 
-export function ReportSection() {
+export function ReportSection({ onOpenReport }) {
   return (
     <motion.section 
       initial={{ opacity: 0, y: 40 }}
@@ -37,14 +37,13 @@ export function ReportSection() {
             whileTap={{ scale: 0.95 }}
             className="shrink-0"
           >
-            <a
-              href="/oficialnyj-otchet-proekta.pdf"
-              download
+            <button
+              onClick={onOpenReport}
               className="relative inline-flex items-center justify-center gap-3 rounded-2xl bg-white px-10 py-5 text-sm font-black text-slate-950 shadow-[0_0_40px_rgba(255,255,255,0.2)] transition-all hover:shadow-[0_0_60px_rgba(255,255,255,0.3)] uppercase tracking-widest"
             >
               <FileDown className="size-5" />
-              Download Full PDF Report
-            </a>
+              Open Digital Report
+            </button>
           </motion.div>
         </div>
       </div>

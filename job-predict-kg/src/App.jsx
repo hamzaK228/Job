@@ -12,6 +12,7 @@ import { useAcceptanceRate } from './hooks/useAcceptanceRate'
 import { LoginModal } from './components/LoginModal'
 import { ApplicationModal } from './components/ApplicationModal'
 import { Dashboard } from './components/Dashboard'
+import { FullReport } from './components/FullReport'
 
 function CustomCursor() {
   const cursorX = useSpring(0, { stiffness: 500, damping: 28 })
@@ -49,6 +50,7 @@ export default function App() {
   const [isLoginOpen, setIsLoginOpen] = useState(false)
   const [selectedJob, setSelectedJob] = useState(null)
   const [user, setUser] = useState(null)
+  const [view, setView] = useState('home') // 'home' or 'report'
 
   const { acceptanceRate, recommendedVacancies } = useAcceptanceRate({
     age: Number(age) || 0,
@@ -95,7 +97,16 @@ export default function App() {
         {!user && <Header onLoginClick={() => setIsLoginOpen(true)} />}
 
         <AnimatePresence mode="wait">
-          {user ? (
+          {view === 'report' ? (
+            <motion.div
+              key="report-view"
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 1.02 }}
+            >
+              <FullReport onBack={() => setView('home')} />
+            </motion.div>
+          ) : user ? (
             <Dashboard key="dashboard" user={user} onLogout={() => setUser(null)} />
           ) : (
             <motion.div 
@@ -122,7 +133,7 @@ export default function App() {
               <MarketContext />
               <InsightSection />
               <ResearchSection />
-              <ReportSection />
+              <ReportSection onOpenReport={() => setView('report')} />
             </motion.div>
           )}
         </AnimatePresence>
