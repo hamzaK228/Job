@@ -21,6 +21,16 @@ app.use('/api/applications', require('./routes/applications'));
 const PORT = process.env.PORT || 5000;
 
 const startServer = async () => {
+  if (process.env.VERCEL) {
+    // In Vercel, we don't call app.listen, it's handled by serverless functions
+    // We also need to connect to DB
+    const { MongoMemoryServer } = require('mongodb-memory-server');
+    const mongoServer = await MongoMemoryServer.create();
+    const mongoUri = mongoServer.getUri();
+    await mongoose.connect(mongoUri);
+    return;
+  }
+
   try {
     const { MongoMemoryServer } = require('mongodb-memory-server');
     const mongoServer = await MongoMemoryServer.create();
@@ -38,3 +48,5 @@ const startServer = async () => {
 };
 
 startServer();
+
+module.exports = app;
