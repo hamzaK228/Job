@@ -38,7 +38,8 @@ export function ReportSection() {
             className="shrink-0"
           >
             <a
-              href="#"
+              href="/oficialnyj-otchet-proekta.pdf"
+              download
               className="relative inline-flex items-center justify-center gap-3 rounded-2xl bg-white px-10 py-5 text-sm font-black text-slate-950 shadow-[0_0_40px_rgba(255,255,255,0.2)] transition-all hover:shadow-[0_0_60px_rgba(255,255,255,0.3)] uppercase tracking-widest"
             >
               <FileDown className="size-5" />
